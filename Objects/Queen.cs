@@ -1,11 +1,12 @@
 using System.Collections.Generic;
+using System;
 
 namespace QueenAttack.Objects
 {
 	public class Queen
 	{
-		private int _queenX = 0;
-		private int _queenY = 0;
+		private int _queenX = 3;
+		private int _queenY = 3;
 
 		public void SetX(int x)
 		{
@@ -19,11 +20,15 @@ namespace QueenAttack.Objects
 
 		public bool CanTakePiece(int x, int y)
 		{
-			if(_queenY == y)
+			if (_queenY == y)
 			{
 				return true;
 			}
 			else if (_queenX == x)
+			{
+				return true;
+			}
+			else if (Math.Abs(y - _queenY) == Math.Abs(x - _queenX))
 			{
 				return true;
 			}

@@ -7,13 +7,19 @@ namespace QueenAttack.Objects
     public void CanTakePiece_Horizontal_true()
     {
       Queen testQueen = new Queen();
-      Assert.Equal(true, testQueen.CanTakePiece(1, 0));
+      Assert.Equal(true, testQueen.CanTakePiece(0, 3));
     }
     [Fact]
     public void CanTakePiece_Vertical_true()
     {
       Queen testQueen = new Queen();
-      Assert.Equal(true, testQueen.CanTakePiece(0,1));
+      Assert.Equal(true, testQueen.CanTakePiece(3, 0));
+    }
+    [Fact]
+    public void CanTakePiece_Diagonal_true()
+    {
+      Queen testQueen = new Queen();
+      Assert.Equal(true, testQueen.CanTakePiece(0, 0));
     }
   }
 }

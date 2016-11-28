@@ -27,7 +27,7 @@ _[Link to site.](https://levibibo.github.io/{site-name})_
 
 * _Behavior: Check if target is out of range._
   _Input: Target is out of range of Queen._
-  _Output: true._
+  _Output: false._
 
 
 ##Support and contact details
