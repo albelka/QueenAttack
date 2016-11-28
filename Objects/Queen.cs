@@ -8,6 +8,12 @@ namespace QueenAttack.Objects
 		private int _queenX = 3;
 		private int _queenY = 3;
 
+		public Queen(int queenX, int queenY)
+		{
+			_queenX = queenX;
+			_queenY = queenY;
+		}
+
 		public void SetX(int x)
 		{
 			_queenX = x;
