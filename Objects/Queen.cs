@@ -23,6 +23,10 @@ namespace QueenAttack.Objects
 			{
 				return true;
 			}
+			else if (_queenX == x)
+			{
+				return true;
+			}
 			else
 			{
 				return false;
