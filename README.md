@@ -13,7 +13,23 @@ _[Link to site.](https://levibibo.github.io/{site-name})_
 
 ##Specifications
 
-*{Specs}
+* _Behavior: Check for target in same row._
+  _Input: Queen and target are in the same row._
+  _Output: true.
+
+* _Behavior: Check for target in same column._
+  _Input: Queen and target are in the same column._
+  _Output: true.
+
+* _Behavior: Check for target in diagonal._
+  _Input: Queen and target are in the diagonal._
+  _Output: true.
+
+* _Behavior: Check if target is out of range._
+  _Input: Target is out of range of Queen._
+  _Output: true.
+
+
 
 ##Support and contact details
 
