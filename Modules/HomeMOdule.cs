@@ -1,8 +1,8 @@
 using Nancy;
 using System.Collections.Generic;
-using NameSpace.Objects;
+using QueenAttack.Objects;
 
-namespace NameSpace
+namespace QueenAttack
 {
 	public class HomeModule : NancyModule
 	{

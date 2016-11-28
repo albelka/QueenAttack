@@ -1,10 +1,10 @@
 using System.Collections.Generic;
 
-namespace NameSpace.Objects
+namespace QueenAttack.Objects
 {
-	public class NewClass
+	public class Queen
 	{
-		public NewClass()
+		public Queen()
 		{
 
 		}
