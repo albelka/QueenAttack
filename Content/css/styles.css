@@ -1,0 +1,42 @@
+.dark {
+  background-color: black;
+}
+
+.light {
+  background-color: white;
+}
+
+.queen {
+  background-color: pink;
+  min-height: 100px;
+  min-width: 100px;
+  /*float: left;*/
+  padding: 0;
+  padding-bottom: 0;
+  margin: 0;
+}
+
+.dark {
+  color: black;
+}
+
+.light {
+  color: white;
+}
+
+.chessboard {
+  max-height: 800px;
+  max-width: 800px;
+  padding: 0;
+  padding-bottom: 0;
+  margin: 0;
+}
+
+button {
+  min-height: 100px;
+  min-width: 100px;
+  float: left;
+  padding: 0;
+  padding-bottom: 0;
+  margin: 0;
+}

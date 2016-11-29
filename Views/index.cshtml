@@ -11,18 +11,32 @@
         <h1>Check to see if the queen can take the piece</h1>
       </div>
 			<div class="row">
-				<div class="col-md-12">
-					<form action="/result" method="post">
-						<label class="form-control" for="queenX">Queen X Coordinate</label>
-						<input class="form-control" type="number" name="queenX" placeholder="0">
-						<label class="form-control" for="queenY">Queen Y Coordinate</label>
-						<input class="form-control" type="number" name="queenY" placeholder="0">
-						<label class="form-control" for="targetX">Target X Coordinate</label>
-						<input class="form-control" type="number" name="targetX" placeholder="0">
-						<label class="form-control" for="targetY">Target Y Coordinate</label>
-						<input class="form-control" type="number" name="targetY" placeholder="0">
-						<button type="submit" class="btn">Check if Queen can take target piece</button>
-					</form>
+				<div class="col-md-12 chessboard">
+					@{
+						var squareCount = 0;
+						for (var gridRow = 0; gridRow < 8; gridRow++)
+						{
+							squareCount++;
+							for (var gridColumn = 0; gridColumn < 8; gridColumn++)
+							{
+								squareCount++;
+								if (squareCount % 2 == 0 )
+								{
+									<form action="/target" method="Post">
+										<input type="hidden" name="clicked" value="@gridRow+gridColumn">
+										<button type="submit" class="dark"></button>
+									</form>
+								}
+								else
+								{
+									<form action="/target" method="Post">
+										<input type="hidden" value="@gridRow+gridColumn">
+										<button type="submit" class="light"></button>
+									</form>
+								}
+							}
+						}
+					}
 				</div>
 			</div>
 		</div>

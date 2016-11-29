@@ -7,21 +7,28 @@ namespace QueenAttack.Objects
 	{
 		private int _queenX = 3;
 		private int _queenY = 3;
+		private static List<Queen> _queens = new List<Queen>{};
 
 		public Queen(int queenX, int queenY)
 		{
 			_queenX = queenX;
 			_queenY = queenY;
+			_queens.Add(this);
 		}
 
-		public void SetX(int x)
+		public static List<Queen> GetAll()
 		{
-			_queenX = x;
+			return _queens;
 		}
 
-		public void SetY(int y)
+		public int GetX()
 		{
-			_queenY = y;
+			return _queenX;
+		}
+
+		public int GetY()
+		{
+			return _queenY;
 		}
 
 		public bool CanTakePiece(int x, int y)

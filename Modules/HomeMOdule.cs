@@ -1,6 +1,7 @@
 using Nancy;
 using System.Collections.Generic;
 using QueenAttack.Objects;
+using System;
 
 namespace QueenAttack
 {
@@ -12,14 +13,22 @@ namespace QueenAttack
 			{
 				return View["index.cshtml"];
 			};
+			Post["/target"] = _ =>
+			{
+				string queenString = Request.Form["clicked"];
+				// int queenX = Convert.ToInt32(queenString[1]);
+				// int queenY = Convert.ToInt32(queenString[0]);
+				Queen newQueen = new Queen(0, 0);
+				List<Queen> allQueens = Queen.GetAll();
+				return View["target.cshtml", allQueens[0]];
+			};
 			Post["/result"] = _ =>
 			{
-				int queenX = int.Parse(Request.Form["queenX"]);
-				int queenY = int.Parse(Request.Form["queenY"]);
-				int targetX = int.Parse(Request.Form["targetX"]);
-				int targetY = int.Parse(Request.Form["targetY"]);
-				Queen newQueen = new Queen(queenX, queenY);
-				return View["result.cshtml", newQueen.CanTakePiece(targetX, targetY)];
+				string targetString = Request.Form["target"];
+				int targetX = int.Parse(targetString[1].ToString());
+				int targetY = int.Parse(targetString[0].ToString());
+				List<Queen> allQueens = Queen.GetAll();
+				return View["result.cshtml", allQueens[0].CanTakePiece(targetX, targetY)];
 			};
 		}
 	}
